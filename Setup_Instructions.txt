@@ -1,0 +1,40 @@
+==========================================================
+TRAFFIC LIGHT FPGA - QUICK START GUIDE (WINDOWS/DE10-LITE)
+==========================================================
+
+1. PROJECT SETUP
+----------------
+- Open Quartus Prime Lite.
+- Go to File > New Project Wizard.
+- Project Name: MainCode (Must match the top-level module).
+- Add all .v files from the 'src' folder.
+- Target Device: MAX 10 -> 10M50DAF484C7G.
+
+2. HARDWARE VS. SIMULATION MODES
+--------------------------------
+The ClockDivider.v needs to be adjusted depending on what you are doing:
+
+A) FOR THE LAB BOARD (DE10-Lite):
+   - Open 'src/ClockDivider.v'
+   - Set: parameter HALF_PERIOD = 25000000;
+   - This ensures the lights change every 1 second.
+
+B) FOR SIMULATION (ModelSim/Waveforms):
+   - Open 'src/ClockDivider.v'
+   - Set: parameter HALF_PERIOD = 50;
+   - This allows the simulation to run fast enough to see waves.
+
+3. PIN ASSIGNMENTS
+------------------
+Since there is no .qsf file, use the provided script:
+- Open the Tcl Console (View > Utility Windows > Tcl Console).
+- Type: source set_pins.tcl
+- Press Enter. (This maps the LEDs, Clock, and Hex displays).
+
+4. COMPILING & FLASHING
+-----------------------
+- Click 'Start Compilation'.
+- Open the 'Programmer' tool.
+- Ensure 'USB-Blaster' is selected in Hardware Setup.
+- Click 'Start' to upload to the board.
+==========================================================
