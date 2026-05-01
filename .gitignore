@@ -1,0 +1,10 @@
+# Ignore Mac system files
+.DS_Store
+__MACOSX/
+
+# Ignore Quartus compilation junk (if your friend pushes back)
+db/
+incremental_db/
+output_files/
+*.rpt
+*.summary
