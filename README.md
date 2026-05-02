@@ -18,3 +18,4 @@ A Verilog implementation of a timed traffic light system for the **DE10-Lite (MA
 ## ⚠️ Important Note on Clock Speed
 *   For **Board Testing**: Ensure `HALF_PERIOD = 25000000` in `ClockDivider.v`.
 *   For **Simulation**: Set `HALF_PERIOD = 50` so the waves move faster!
+*   ALL THE BEST..
