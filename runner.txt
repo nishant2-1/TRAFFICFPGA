@@ -1,0 +1,2 @@
+02-05-2026 
+after running it on EDA playground it is showing perfect waveform now trying to run on quadrus peime lite
